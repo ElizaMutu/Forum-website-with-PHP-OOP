@@ -4,10 +4,10 @@
 define("WEBSITE_NAME","Forum");
 
 //set database variables
-define('DB_TYTLE', 'mysql');
-define('DB_NAME', 'forum');
+define('DB_TYPE', 'mysql');
+define('DB_NAME', 'forum_db');
 define('DB_USER', 'root');
-define('DB_PASS', 'mysql');
+define('DB_PASS', '');
 define('DB_HOST', 'localhost');
 
 //protocol type http or https
