@@ -21,9 +21,19 @@
 
 
 <body>
-    <img src="<?=ASSETS?>/css/fantasy-g.jpg" alt="Bridge">
+    <div class="container">
+        
+        <div class="img-div">
+            <img src="<?=ASSETS?>/css/fantasy-g.jpg" alt="Blue Butterflies">
+        </div>        
+        <div class="headernav">
 
+        </div>
+
+
+    </div>
 
 </body>
+
 
 <?php $this->view("footer"); ?>

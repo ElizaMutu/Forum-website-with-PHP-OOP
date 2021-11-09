@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,200;1,300&display=swap');
 * {
     padding:0px;
     margin:0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color:  #cdcdb1;
 }
 
 .navbar {
@@ -25,16 +31,22 @@
     color: blueviolet;
     position: absolute;
     float: left;
+    left: 25px;
+    font-size: 16px;;
+    font-style: italic;
+    font-weight: bolder;
 }
 .dropdown {
-    position: relative;
+    position: absolute;
     display: inline-block;
+    right: 35px;
 }
 .dropbtn {
     background-color: rgb(42, 238, 222);
     color: rgb(104, 15, 52);
     padding: 12px; 
     font-size: 14px;
+    font-weight: bolder;
     border: none;
     cursor: pointer;
 }
@@ -42,8 +54,8 @@
     display: none;
     /* right: 0; */
     background-color: #a019ee;
-    min-width: 94px;
-    min-height: 50px;
+    min-width: 104px;
+    min-height: 60px;
     align-items: center;
     z-index: 2;
 }
@@ -69,9 +81,17 @@
 }
   /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    background-color: #4853e6;
+    background-color: #af61bb;
 }
 
 img {
     width: 100%;
+}
+.headernav {
+    margin-top: -0.8rem;
+    /* padding: 0 !important;
+    border: 0 !important;  */
+    height: 70px;
+    width: 100%;
+    background-color: #ecf0f1;
 }
