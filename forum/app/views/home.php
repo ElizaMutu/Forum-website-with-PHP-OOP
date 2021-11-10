@@ -27,6 +27,12 @@
             <img src="<?=ASSETS?>/css/fantasy-g.jpg" alt="Blue Butterflies">
         </div>        
         <div class="headernav">
+            <form action="" method="POST">
+                <input type="text" placeholder="">
+                <button type="submit" class="searchbutton">Search</button>
+            </form>
+
+            <button class="startnewtopicbutton">Start New Topic</button>
 
         </div>
 
