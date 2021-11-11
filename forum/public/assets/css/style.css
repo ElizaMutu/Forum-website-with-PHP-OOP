@@ -96,8 +96,10 @@ img {
 .headernav input {
     float: left;
     padding: 6px;
-    margin-left: 156px;
+    font-weight: 1000;
+    margin-left: 182px;
     margin-top: 20px;
+    width: 20rem;
     border: 2px solid #ccc;
     border-radius: 4px;
     background-color:  #cdcdb1;
@@ -107,10 +109,11 @@ img {
     padding: 6px;
     margin-top: 20px;
     border-radius: 6px;
+    font-weight: 900;
 }
 .startnewtopicbutton {
     float: right;
-    margin-right: 150px;
+    margin-right: 200px;
     margin-top: 20px;
     padding: 8px 25px;
     color: white;
@@ -118,4 +121,17 @@ img {
     background-color: #00cc66;
     border: none;
     border-radius: 6px;
+}
+
+.grid-container-element { 
+    margin-inline-start: 182px;
+    display: grid; 
+    grid-template-columns: 2fr 1fr; 
+    grid-gap: 20px; 
+    border: 1px solid black; 
+    width: 75%; 
+} 
+.grid-child-element { 
+    margin: 10px; 
+    border: 1px solid red; 
 }

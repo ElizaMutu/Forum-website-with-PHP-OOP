@@ -28,12 +28,28 @@
         </div>        
         <div class="headernav">
             <form action="" method="POST">
-                <input type="text" placeholder="">
+                <input type="text" placeholder="Search Topics">
                 <button type="submit" class="searchbutton">Search</button>
             </form>
 
             <button class="startnewtopicbutton">Start New Topic</button>
+        </div>
 
+        <div class="grid-container-element">
+            <div class="grid-child-element purple">Flex Column 1</div>
+            
+            <div class="grid-child-element green">
+                <p>Categories</p><hr>
+                <ul>
+                <?php if(is_array($data['categories'])): ?>
+                    <?php foreach($data['categories'] as $row): ?>
+                        
+                        <li><?=$row['name']; ?></li>
+                        
+                    <?php endforeach; ?>
+                <?php endif; ?>
+                </ul>
+            </div>
         </div>
 
 
