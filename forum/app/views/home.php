@@ -41,12 +41,14 @@
             <div class="grid-child-element green">
                 <p>Categories</p><hr>
                 <ul>
-                <?php if(is_array($data['categories'])): ?>
+                <?php if(isset($data['categories'])): ?>
+                    <?php if(is_array($data['categories'])):  ?>
                     <?php foreach($data['categories'] as $row): ?>
                         
-                        <li><?=$row['name']; ?></li>
-                        
+                        <li><?=$row->name; ?></li>
+                    
                     <?php endforeach; ?>
+                <?php endif; ?>
                 <?php endif; ?>
                 </ul>
             </div>
