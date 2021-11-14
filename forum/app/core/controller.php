@@ -2,7 +2,7 @@
 
 class Controller {
 
-    protected function view($view) {
+    protected function view($view, $data = []) {
 
         if(file_exists("../app/views/". $view .".php")) {
             
@@ -12,7 +12,7 @@ class Controller {
         }
     }
 
-    protected function loadModel($model) {
+    protected function loadModel($model, $data = []) {
 
         if(file_exists("../app/models/". $model .".php")) {
             

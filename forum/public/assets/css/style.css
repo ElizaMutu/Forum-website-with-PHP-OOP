@@ -133,5 +133,20 @@ img {
 } 
 .grid-child-element { 
     margin: 10px; 
-    border: 1px solid red; 
+    border: 1px solid #ecf0f1; 
+}
+.categclass {
+    font-weight: bolder;
+    padding: 15px 20px;
+}
+.green {
+    background-color: #ecf0f1;
+}
+.categ_list {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.categ_list li {
+    list-style-type: none;
+    padding-left: 20px;
 }
