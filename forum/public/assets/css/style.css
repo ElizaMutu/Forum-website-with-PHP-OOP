@@ -128,12 +128,21 @@ img {
     display: grid; 
     grid-template-columns: 2fr 1fr; 
     grid-gap: 20px; 
-    border: 1px solid black; 
     width: 75%; 
 } 
 .grid-child-element { 
     margin: 10px; 
-    border: 1px solid #ecf0f1; 
+}
+.div-discussions {
+    background-color: #ecf0f1;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.div-discussions p {
+    font-weight: 1000;
+    padding-bottom: 10px;    
 }
 .categclass {
     font-weight: bolder;

@@ -36,7 +36,19 @@
         </div>
 
         <div class="grid-container-element">
-            <div class="grid-child-element purple">Flex Column 1</div>
+            <div class="grid-child-element purple">
+
+                <?php if(isset($data['discussions'])): 
+                    if(is_array($data['discussions'])): 
+                    foreach($data['discussions'] as $dis): ?>
+                        <div class="div-discussions">
+                            <p><?=$dis->title; ?></p>
+                            <div><?=var_dump(firstwords($dis->text)); ?></div>
+                        </div><br>
+                <?php endforeach; 
+                    endif;
+                    endif; ?>
+            </div>
             
             <div class="grid-child-element green">
                 <p class="categclass">Categories</p><hr>
