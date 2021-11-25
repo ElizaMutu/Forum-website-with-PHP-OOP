@@ -23,6 +23,18 @@
 <body>
     <div class="container">
         
+        <div class="bg-modal">
+            <div class="modal-content">
+                <img src="<?=ASSETS?>/css/purplecity.jpg" alt="Icon">
+
+                <form action="">
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Email">
+                    <a href="" class="button">Submit</a>
+                </form>
+            </div>
+        </div>
+
         <div class="img-div">
             <img src="<?=ASSETS?>/css/fantasy-g.jpg" alt="Blue Butterflies">
         </div>        
@@ -43,7 +55,7 @@
                     foreach($data['discussions'] as $dis): ?>
                         <div class="div-discussions">
                             <p><?=$dis->title; ?></p>
-                            <div><?=var_dump(firstwords($dis->text)); ?></div>
+                            <div><?=firstwords($dis->text); ?></div>
                         </div><br>
                 <?php endforeach; 
                     endif;
