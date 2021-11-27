@@ -16,10 +16,6 @@ class Home extends Controller {
 
         $data['categories'] = $result;
 
-        $this->view("home",$data);
-
-        $data['page_title'] = "Home";
-
         if(isset($_POST['password'])) {
             $user = $this->loadModel("user");
             $user->register($_POST);
@@ -28,11 +24,6 @@ class Home extends Controller {
             $user = $this->loadModel("user");
             $user->login($_POST);
         }
-
-        $this->view("home",$data);
-
-        
-        $data['page_title'] = "Home";
 
         if(isset($_POST['email'])) {
             $user = $this->loadModel("user");

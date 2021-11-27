@@ -42,7 +42,7 @@ class User {
             $data = $DB->write($query,$arr);
 
             if($data) {
-                // header("Location:". ROOT ."home");
+                header("Location:". ROOT ."home");
                 die;
             } 
         } else {
