@@ -22,30 +22,32 @@
 
 <body>
     <div class="container">
-        
+    <!-- <?php check_message() ?> -->
+
+        <!--Login Modal-->
         <div class="bg-modal">
             <div class="modal-content">
-
                 <div class="close">+</div>
                 <img src="<?=ASSETS?>/css/purplecity.jpg" alt="Icon">
 
-                <form action="">
-                    <input type="text" placeholder="Username">
-                    <input type="text" placeholder="Email">
-                    <a href="" class="loginbutton">Login</a>
+                <form action="" method="POST">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button href="" class="loginbutton">Login</button>
                 </form>
             </div>
         </div>
+        <!--Register Modal-->
         <div class="bg-modal2">
             <div class="modal-content2">
                 <div class="close2">+</div>  
-                    <form action="">
-                        <input type="text" placeholder="Name">
-                        <input type="text" placeholder="Username">
-                        <input type="text" placeholder="Email">
-                        <input type="text" placeholder="Password">
-                        <a href="" class="loginbutton">Register</a>
-                    </form>
+                <form action="" method="POST"><BR>
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="text" name="email" placeholder="Email" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button class="registerbutton">Register</button>
+                </form>
             </div>
         </div>
 
