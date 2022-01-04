@@ -27,7 +27,12 @@ function check_message() {
 
     if(isset($_SESSION['error']) && $_SESSION['error'] != "") {
         
-        echo $_SESSION['error'];
+        echo "<p class='error-message'>" .$_SESSION['error']. "</p>";
         unset ($_SESSION['error']);
     }
+}
+
+function hash_password($string) {
+    $string = password_hash($string, PASSWORD_DEFAULT);
+    return $string;
 }

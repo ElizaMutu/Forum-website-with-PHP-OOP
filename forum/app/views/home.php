@@ -22,11 +22,15 @@
 
 <body>
     <div class="container">
-    <!-- <?php check_message() ?> -->
+    <?php check_message() ?> 
+    
+    <!-- <?php if(isset($_SESSION['username'])): ?>
+        <p class="hello-class">Hello, <?=$_SESSION['username'] ?>! </p>
+        <?php endif; ?> -->
 
         <!--Login Modal-->
-        <div class="bg-modal">
-            <div class="modal-content">
+        <div class="bg-modal-login">
+            <div class="modal-login">
                 <div class="close">+</div>
                 <img src="<?=ASSETS?>/css/purplecity.jpg" alt="Icon">
 
@@ -38,13 +42,13 @@
             </div>
         </div>
         <!--Register Modal-->
-        <div class="bg-modal2">
-            <div class="modal-content2">
+        <div class="bg-modal-register">
+            <div class="modal-register">
                 <div class="close2">+</div>  
                 <form action="" method="POST"><BR>
                     <input type="text" name="name" placeholder="Name" required>
                     <input type="text" name="username" placeholder="Username" required>
-                    <input type="text" name="email" placeholder="Email" required>
+                    <input type="email" name="email" placeholder="Email" required>
                     <input type="password" name="password" placeholder="Password" required>
                     <button class="registerbutton">Register</button>
                 </form>

@@ -16,10 +16,13 @@ class User {
 
             if(is_array($data)) {
                 //logged in
-                $_SESSION['id'] = $data[0]->id;
                 $_SESSION['username'] = $data[0]->username;
                 $_SESSION['user_url'] = $data[0]->url_address;
-            } else {
+
+                header("Location:". ROOT ."home");
+                die;
+            } 
+            else {
                 $_SESSION['error'] = "Wrong username or password!";
             }
         } else {
@@ -31,13 +34,13 @@ class User {
         $DB = new Database();
 
         $_SESSION['error'] = "";
-        if(isset($POST['username']) && isset($POST['password'])) {
+        if(isset($POST['username']) && isset($POST['email'])) {
             $arr['url_address'] = get_random_string_max(60);
             $arr['name'] = $POST['name'];
             $arr['username'] = $POST['username'];
             $arr['email'] = $POST['email'];
-            $arr['password'] = $POST['password'];
-
+            $arr['password'] = hash_password($POST['password']);
+            
             $query = "INSERT INTO users (url_address,name, username, email, password) VALUES (:url_address,:name, :username, :email, :password)";
             $data = $DB->write($query,$arr);
 
