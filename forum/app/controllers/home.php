@@ -16,11 +16,11 @@ class Home extends Controller {
 
         $data['categories'] = $result;
 
-        if(isset($_POST['password'])) {
-            $user = $this->loadModel("user");
-            $user->register($_POST);
-        } 
-        elseif(isset($_POST['username']) && !(isset($_POST['email']))) {
+        // if(isset($_POST['password'])) {
+        //     $user = $this->loadModel("user");
+        //     $user->register($_POST);
+        // } 
+        if(isset($_POST['username']) && !(isset($_POST['email'])) && (isset($_POST['password']))) {
             $user = $this->loadModel("user");
             $user->login($_POST);
         }

@@ -11,8 +11,12 @@
             <li class="dropdown">
                 <div class="dropbtn">My Account</div>
                 <ul class="dropdown-content">
-                    <li><a href="#" id="button" class="button">Login</a></li>
-                    <li><a href="#" id="button2" class="button2">Register</a></li>
+                    <?php if(!isset($_SESSION['username'])): ?>
+                        <li><a href="#" id="button" class="button">Login</a></li>
+                        <li><a href="#" id="button2" class="button2">Register</a></li>
+                    <?php else: ?>
+                        <li><a href="<?=ROOT?>logout">Logout</a></li>
+                    <?php endif; ?>
                 </ul>
             </li>
         </ul>
@@ -22,11 +26,7 @@
 
 <body>
     <div class="container">
-    <?php check_message() ?> 
-    
-    <!-- <?php if(isset($_SESSION['username'])): ?>
-        <p class="hello-class">Hello, <?=$_SESSION['username'] ?>! </p>
-        <?php endif; ?> -->
+        <?php check_message() ?> 
 
         <!--Login Modal-->
         <div class="bg-modal-login">
@@ -45,11 +45,13 @@
         <div class="bg-modal-register">
             <div class="modal-register">
                 <div class="close2">+</div>  
-                <form action="" method="POST"><BR>
+                <form action="" method="POST" enctype="multipart/form-data"><BR>
                     <input type="text" name="name" placeholder="Name" required>
                     <input type="text" name="username" placeholder="Username" required>
                     <input type="email" name="email" placeholder="Email" required>
                     <input type="password" name="password" placeholder="Password" required>
+                    <input type="password" name="password" placeholder="Confirm Password" required>
+                    <input type="file" name="image"/>
                     <button class="registerbutton">Register</button>
                 </form>
             </div>

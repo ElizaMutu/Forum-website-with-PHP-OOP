@@ -24,12 +24,21 @@ function get_random_string_max($length) {
 }
 
 function check_message() {
+    
+    if(isset($_SESSION['status']))  {
+        echo "<p class='hello-class'>" .$_SESSION['status']. "</p>";
+        unset($_SESSION["status"]);
+    }
 
-    if(isset($_SESSION['error']) && $_SESSION['error'] != "") {
-        
+    else if(isset($_SESSION['error']) && $_SESSION['error'] != "") {
         echo "<p class='error-message'>" .$_SESSION['error']. "</p>";
         unset ($_SESSION['error']);
     }
+
+    if(isset($_SESSION['username']) && isset($_SESSION['password']) && isset($_SESSION['status'])) {
+        echo "<p class='hello-class'>" .$_SESSION['status']. "</p>";
+        unset($_SESSION["status"]);
+    } 
 }
 
 function hash_password($string) {

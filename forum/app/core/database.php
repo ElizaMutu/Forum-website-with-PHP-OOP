@@ -60,4 +60,17 @@ class Database {
         }
     }
 
+    public function getPasswordFromDb($username) {
+        $DB = $this->db_connect();
+        $q = "SELECT password FROM users WHERE username = ?";
+        $hash = $DB->prepare($q);
+        $hash ->bindParam(1, $username);
+        $hash->execute();
+        $results = $hash ->fetchAll(PDO::FETCH_OBJ);
+
+        if(isset($results[0])) {
+            return $results[0] -> password;
+        }
+    }
+
 }
